@@ -1,0 +1,17 @@
+<apex:page>
+    <apex:includeLightning/>
+    
+    <div id="lwc2Here" />
+
+    <script type="text/javascript">
+
+        $Lightning.use("c:lghtOutDepApp1", function() {
+            $Lightning.createComponent(
+                "c:lwcForLghtOutVFPage", 
+                {}, 
+                "lwc2Here", 
+                function(cmp) { console.log("LWC is created!"); }
+            );
+        });
+    </script>
+</apex:page>

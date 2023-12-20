@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel>
+    <masterLabel>OurFirstMessageChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Some description for our message channel...</description>
+    <lightningMessageFields>
+        <description>Id of the record</description>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>Name of the record</description>
+        <fieldName>name</fieldName>
+    </lightningMessageFields>
+</LightningMessageChannel>

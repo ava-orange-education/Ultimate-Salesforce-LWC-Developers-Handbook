@@ -1,0 +1,32 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid my-header slds-p-bottom_large">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="standard:account" alternative-text="account" title="account" size="small" aria-hidden="true"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+                            <span>Accounts</span>
+                        </a>
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <button class="slds-button slds-button_neutral" onclick={newAccount}>New</button>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">Anything can go into the card body</div>
+        <footer class="slds-card__footer">
+            <a class="slds-card__footer-action" href="#" onclick={openAllAccounts}>View All
+                <span class="slds-assistive-text">Accounts</span>
+            </a>
+        </footer>
+    </article>
+    <p>This paragraph is formatted via cssLibrary</p>
+    <h3>This header is formatted via cssLibrary</h3>
+</template>

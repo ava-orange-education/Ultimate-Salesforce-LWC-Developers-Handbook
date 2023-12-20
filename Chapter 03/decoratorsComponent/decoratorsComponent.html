@@ -1,0 +1,22 @@
+<template>
+    {myProperty}
+    <br/><br/>
+    <h1>My Object:</h1>
+    <p>
+        Property1 = {myObject.property1}<br/>
+        Property2 = {myObject.property2}
+    </p>
+    <br/>
+    <h1>My Array:</h1>
+    <ul>
+        <template for:each={myArray} for:item="el">
+            <li key={el}>Element value = {el}</li>
+        </template>
+    </ul>
+    <br/>
+    <lightning-button label="Change Object" onclick={changeObject}></lightning-button>
+    <lightning-button label="Change Object's Property1" onclick={changeObjectProp1}></lightning-button>
+    <br/>
+    <lightning-button label="Change Array" onclick={changeArray}></lightning-button>
+    <lightning-button label="Change Array's First Element" onclick={changeArrayEl1}></lightning-button>
+</template>

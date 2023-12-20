@@ -1,0 +1,14 @@
+<template>
+    <lightning-record-form record-id={recordId}
+        object-api-name={objectApiName}
+        record-type-id={recordTypeId}
+        fields={fields}
+        mode="edit"
+        columns="2"
+        onsubmit={handleSubmit}
+        onsuccess={handleSuccess}
+        onerror={handleError}
+        oncancel={handleCancel}
+    >
+    </lightning-record-form>
+</template>

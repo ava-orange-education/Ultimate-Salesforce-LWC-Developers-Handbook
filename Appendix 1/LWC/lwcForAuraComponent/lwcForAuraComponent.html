@@ -1,0 +1,15 @@
+<template>
+    <br/><br/>
+    <div class="slds-box">
+        <span style="color:green; font-weight:bold;">Now we're in our LWC which resides in the Aura component...</span><br/><br/>
+        <h1><b>List of Accounts:</b></h1>
+        <template for:each={accounts} for:item="acc">
+            <p key={acc.Id}>{acc.Name}, {acc.Phone}</p>
+        </template>
+        <br/>
+        <p style="color:aqua; font-weight:bold;">{messageFromAura}</p>
+        <br/>
+        <lightning-button label="Send Data to Aura" onclick={sendData}></lightning-button>
+        <br/>
+    </div>
+</template>

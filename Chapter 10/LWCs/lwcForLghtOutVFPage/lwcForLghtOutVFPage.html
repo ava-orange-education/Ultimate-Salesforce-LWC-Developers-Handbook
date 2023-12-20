@@ -1,0 +1,6 @@
+<template>
+    <h1><b>List of Accounts:</b></h1>
+    <template for:each={accounts} for:item="acc">
+        <p key={acc.Id}>{acc.Name}, {acc.Phone}</p>
+    </template>
+</template>

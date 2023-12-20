@@ -1,0 +1,30 @@
+<template>
+	<template lwc:if={isBlue}>
+		<p style="color: blue;">Blue text!</p>
+	</template>
+	<template lwc:elseif={isRed}>
+		<p style="color: red;">Red text!</p>
+	</template>
+    <template lwc:elseif={isGreen}>
+		<p style="color: green;">Green text!</p>
+        <p lwc:if={isOrange} style="color: orange;">This is an orange text!</p>
+	</template>
+	<template lwc:else>
+		<p>Default text</p>
+	</template>
+    <ul class="slds-var-m-around_medium">
+        <template for:each={contacts} for:item="con">
+            <li key={con.Id}>{con.Name}, {con.Title}</li>
+        </template>
+    </ul>
+	<table key={tableKey} for:each={contacts} for:item="con">
+        <tbody><tr style="border:1px solid black;"><td>{con.Name}, {con.Title}</td></tr></tbody>
+    </table>
+	<ul class="slds-var-m-around_medium">
+		<template iterator:myit={contacts}>
+			<li key={myit.value.Id} lwc:if={myit.first} style="font-weight: bold;">{myit.value.Name}, {myit.value.Title}</li>
+			<li key={myit.value.Id} lwc:elseif={myit.last} style="font-style:italic">{myit.value.Name}, {myit.value.Title}</li>
+			<li key={myit.value.Id} lwc:else>{myit.value.Name}, {myit.value.Title}</li>
+		</template>
+	</ul>
+</template>

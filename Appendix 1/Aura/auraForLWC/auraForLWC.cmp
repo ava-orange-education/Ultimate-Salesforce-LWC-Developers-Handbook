@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="datalwc" type="String"></aura:attribute>
+    <div class="slds-box slds-theme_info slds-theme_alert-texture">
+        <span style="color:blue; font-weight:bold">This is Aura component!</span>
+        <c:lwcForAuraComponent onsenddata="{!c.printData}" messageFromAura="This message is from Aura component!"/>
+        <br/>
+        <p style="color:green; font-weight:bold;">{!v.datalwc}</p>
+    </div>
+    
+</aura:component>	

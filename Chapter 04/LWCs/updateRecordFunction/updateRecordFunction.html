@@ -1,0 +1,7 @@
+<template>
+    <template if:true={currentAccount}>
+        <lightning-input label="Name" type="text" data-name="name" value={currentAccount.Name}></lightning-input>
+        <lightning-input label="Website" type="url" data-name="website" value={currentAccount.Website}></lightning-input><br/>
+        <lightning-button variant="brand" label="Update Account" onclick={handleUpdate}></lightning-button>
+    </template>
+</template>

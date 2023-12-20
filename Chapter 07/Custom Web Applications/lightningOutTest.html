@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Lightning Out - Test</title>
+   <script src="https://[AddYourOwnCustomDomain].my.salesforce.com/lightning/lightning.out.js"></script>
+  </head>
+  <body>
+    <div id="lwc2Here" />
+    Lightning Out - Testing...
+    <script type="text/javascript">
+        $Lightning.use("c:lghtOutDepApp1", function() {
+            $Lightning.createComponent(
+                "c:lwcForLghtOutVFPage",
+                {},
+                "lwc2Here",
+                function(cmp) { console.log("LWC is created!"); }
+            );
+        },
+        "[https://[AddYourOwnCustomDomain].lightning.force.com]",
+        "[AddYourOwnSESSIONID]");
+    </script>
+  </body>
+</html>

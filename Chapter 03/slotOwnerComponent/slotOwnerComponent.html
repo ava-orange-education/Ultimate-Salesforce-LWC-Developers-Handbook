@@ -1,0 +1,12 @@
+<template>
+    <c-slot-parent-component>
+        <c-slot-child-component>
+            <div slot="slot1">This is the 'slot1' content</div>
+            <div slot="slot2">This is the 'slot2' content</div>
+        </c-slot-child-component>
+        <template lwc:if={addOneMoreChildComponent}>
+            <c-slot-child-component></c-slot-child-component>
+        </template>
+    </c-slot-parent-component>
+    <lightning-button label="Add One More Child Component" onclick={handleAdd}></lightning-button>
+</template>

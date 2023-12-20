@@ -1,0 +1,5 @@
+@import 'c/cssLibrary'; 
+
+div.my-header {
+    background-color :  var(--lwc-brandBackgroundDark); 
+}

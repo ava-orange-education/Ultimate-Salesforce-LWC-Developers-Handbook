@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+<div id="div1" onclick="javascript:alert('div');"><p onclick="javascript:alert('p');"><span onclick="javascript:alert('span');">Click me for "bubbling"!</span></p></div>
+<div id="div2" name="capture"><p name="capture"><span name="capture">Click me for "capturing"!</span></p></div>
+
+<script type="text/javascript">
+	var capturingComponents = document.querySelectorAll("[name = 'capture']");
+	capturingComponents.forEach(ele => {
+		ele.addEventListener("click", event => console.log(event.currentTarget.tagName), true); 
+	});
+</script>
+</body>
+</html>

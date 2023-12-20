@@ -1,0 +1,13 @@
+<template>
+    <lightning-input name="first-number" label="Enter first number" value={firstNumber} onchange={updateNumbers}></lightning-input>
+    <lightning-input name="second-number" label="Enter second number" value={secondNumber} onchange={updateNumbers}></lightning-input>
+    <lightning-combobox 
+        name="calculation-type" 
+        label="Please select the calculation type: "
+        value="0"
+        options = {options}
+        onchange={handleChange}
+    ></lightning-combobox>
+    <br/>
+    <c-composition-composed-component title=''>{result}</c-composition-composed-component>
+</template>
